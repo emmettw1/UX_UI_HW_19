@@ -1,0 +1,272 @@
+
+body {
+    font-family: Zilla Slab, Yaldevi, serif;
+}
+
+section {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.inline-block {
+    display: inline-block;
+
+}
+h1 {
+    text-align: center;
+}
+
+.logo {
+    width: 40%;
+    margin: auto;}
+
+nav {
+    width: 100%;
+    margin: auto;
+    background-color: #DDDBCB;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    margin-left: auto;
+}
+
+nav li {
+    font-size: 30px;
+    padding: inherit;
+}
+
+h4 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.imgPreview img{
+    display: block;
+    margin: auto;
+}
+
+.selfPreview {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.picture {
+    width: 50%;
+    height: 50%;
+}
+
+p {
+    font-size:18px;
+}
+/*Grid Structure*/
+
+.imgPreview {
+    grid-area: imgPreview;
+}
+
+.selfPreview {
+    grid-area: selfPreview;
+}
+.workPreview{
+    grid-area: workPreview;
+}
+
+.skillsPreview {
+    grid-area: skillsPreview;
+}
+
+.heroGrid {
+    display:grid;
+    /*outline-style: dotted;
+    outline-color: blue;*/
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "imgPreview selfPreview"
+        "workPreview skillsPreview"
+    ;
+    align-items: center;
+    justify-items: center;
+}
+
+/*End Grid Structure*/
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+
+.skill {
+    width: 33%;
+    /*outline-style: dotted;
+    outline-color: red;*/
+}
+
+.skill img {
+ display:block;   
+ margin: auto;
+}
+
+.skill h3 {
+    text-align: center;
+}
+
+.skill p, .workGrid p{
+    margin: 10px;
+    margin-left: 40px;
+}
+
+.workGrid img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+
+.workGrid h4 {
+    padding: 0 10px 10px 0;
+    font-size: 24px;
+}
+
+.workGrid p {
+    padding: 30px 30px 10px 30px;
+}
+
+/*Grid Structure*/
+.ppages {
+    grid-area: ppages;
+}
+
+.localeyes {
+    grid-area: localeyes;
+}
+
+.ppages {
+    grid-area: ppages;
+}
+
+.localeyes {
+    grid-area: localeyes;
+}
+
+.p1img {
+    grid-area: p1img;
+}
+
+.p2img {
+    grid-area: p2img;
+}
+
+.p1text {
+    grid-area: p1text;
+}
+
+.p2text {
+    grid-area: p2text;
+}
+
+.p1button {
+    grid-area: p1button;
+}
+
+.p2button {
+    grid-area: p2button;
+}
+.workGrid {
+    display: grid;
+    /*height: auto*/
+    /*outline-style: dotted;
+    outline-color: blue;*/
+    grid-template-rows: 15% 30% 45% 10%; /*repeat(4, 1fr);*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "ppages localeyes"
+        "p1img p2img"
+        "p1text p2text"
+        "p1button p2button";
+    align-items: center;
+    justify-items: center;
+
+}
+/*End Grid Structure*/
+
+
+
+footer {
+    background-color: #DDDBCB;
+}
+
+footer ul {
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+footer li {
+    font-size:20px
+}
+
+button {
+    background-color: #62E7F8;
+    border: 1px solid black;
+    padding: 3px 5px 3px 5px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+/*If HTML meta tag is not used, 'px' needs added to max-width*/
+@media only screen and (max-width: 600) {
+    .heroGrid {
+        display:grid;
+        outline-style: dotted;
+        outline-color: blue;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "imgPreview"
+            "selfPreview"
+            "workPreview"
+            "skillsPreview"
+        ;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .flexContainer {
+        display: grid;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    .workGrid {
+        display: grid;
+        /*height: auto*/
+        outline-style: dotted;
+        outline-color: blue;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "ppages"
+            "p1img"
+            "p1text"
+            "p1button"
+            "localeyes"
+            "p2img"
+            "p2text"
+            "p2button";
+        align-items: center;
+        justify-items: center;   
+    }
+
+}

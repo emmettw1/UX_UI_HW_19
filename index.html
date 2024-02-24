@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--The meta tag seems necessary to get the media query to work. 
+            Perhaps the browser comes with a default setting that needs overwritten.
+            Adding this tag also fixed large right margin without border-box property
+            2-22 Seems either meta tag OR 'px' needed for max-width, meta tag is universal-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Zilla Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Yaldevi' rel='stylesheet'>
+        <title>Emmett Williams UX</title>
+    </head>
+    <body>
+        <header class="navigation">
+            <!-- <div class="inline-block logo"><img src="images/logo.png"></div> -->
+            <nav>
+                <ul>
+                    <li class="inline-block"><img class="logo" src="images/logo.png"></li>
+                    <li class="inline-block">About Me</li>
+                    <li class="inline-block">Skills</li>
+                    <li class="inline-block">My Work</li>
+                    <li class="inline-block">Contact Me</li>
+                </ul>
+            </nav>
+        </header>
+        <section class="heroSection">
+            <div class="heroGrid">
+            <div class="imgPreview"><div><img class="picture" src="images/Picture-Self.png"></div></div>
+            <div class="selfPreview">
+                <h4>About Me</h4>
+                <p>Hi, my name is Emmett Williams. I am an aspiring UX designer with a passion
+                    for simple, friendly designs. With a lifelong interest in human behavior
+                    and how people interact with and are impacted by their surroundings, I hope to
+                    design great solutions to our most frustrating problems. 
+                </p>
+                <button>Download Resume</button>
+            </div>
+            <div class="workPreview">
+                <h4>My Projects</h4>
+                <ul>
+                    <li>Promising Pages</li>
+                    <li>LocalEyes</li>
+                    <li>EasyWay</li>
+                </ul>
+                <button>View More</button>
+            </div>
+            <div class="skillsPreview">
+                <h4>My Skills</h4>
+                <ul>
+                    <li>User Interviews</li>
+                    <li>Affinity Mapping</li>
+                    <li>Prototyping</li>
+                </ul>
+                <button>View More</button>
+            </div>
+        </section>
+        <!-- My UX Skills section coded using CSS flex-->
+        <section class="mySkills">
+            <h1>My UX Skills</h1>
+            <div class="flexContainer">
+                <div class="skill">
+                    <img src="images/placeholder.jpg">
+                    <h3>User Interviews</h3>
+                    <p>I enjoy conducting user interviews, and see them as the best opportunity to empathize with users and glean insights to help solve their problems.</p>
+                </div>
+                <div class="skill">
+                    <img src="images/placeholder.jpg">
+                    <h3>Affinity Mapping</h3>
+                    <p>Sorting and resorting data into appropriate categories is a useful tool to help drive the development of a project.</p>
+                </div>
+                <div class="skill">
+                    <img src="images/placeholder.jpg">
+                    <h3>Prototyping and Testing</h3>
+                    <p>Building and testing prototypes provide a great opportunity to identify problem areas before hours of coding effort have been performed.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="myWork">
+            <h1>My Work</h1>
+            <div class="workGrid">
+                <div class="p1img"><img src="images/placeholder.jpg"></div>
+                <!--<div class="project1"> -->
+                    <h4 class="ppages">Promising Pages</h4>
+                    <p class= "p1text">A mobile redesign for Promising Pages, a nonprofit that distributes books to kids.</p>
+                    <button class="p1button">View Project</button>
+                <!--</div> -->
+                <div class="p2img"><img src="images/placeholder.jpg"></div>
+                <!-- <div class="project2"> -->
+                    <h4 class="localeyes">LocalEyes</h4>
+                    <p class="p2text">A mobile app that connects travelers to local recommendations</p>
+                    <button class="p2button">View Project</button>
+                <!-- </div> -->
+            </div>
+            <button>View All Projects</button>
+        </section>
+        <footer>
+            <ul>
+                <li class="inline-block">About Me</li>
+                <li class="inline-block">Skills</li>
+                <li class="inline-block">My Work</li>
+                <li class="inline-block">Contact Me</li>
+            </ul>
+        </footer>
+    </body>
+</html>
