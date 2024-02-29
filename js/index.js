@@ -19,5 +19,12 @@ $(".mySkills").on("mouseleave", function(){
     $(".mySkills").toggleClass("displayToggle");
 });
 
+$("button").on("mouseenter", function(){
+    $("button").css("font-weight", "bold");
+})
+
+$("button").on("mouseleave", function(){
+    $("button").css("font-weight", "regular");
+})
 
 console.log("Your index.js file is loaded correctly!")

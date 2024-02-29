@@ -1,17 +1,18 @@
-
-body {
+ body {
     font-family: Zilla Slab, Yaldevi, serif;
+    background-color: #DDDBCB;
+    background-image: url('/images/sky.jpg')
 }
 
 section {
     width: 80%;
     margin: 0 auto;
+    background-color: transparent;
 }
 
 .displayToggle{
     display: none;
 }
-
 
 .inline-block {
     display: inline-block;
@@ -22,12 +23,12 @@ h1 {
 }
 
 .logo {
-    width: 40%;}
+    width: 20%;}
 
 nav {
     width: 100%;
     margin: auto;
-    background-color: #DDDBCB;
+    background-color: transparent;
 }
 
 ul {
@@ -46,18 +47,28 @@ h4 {
     text-align: center;
 }
 
+div {
+    box-sizing: border-box;
+}
+
+
 .imgPreview img{
     display: block;
     margin: 0 auto;
 }
 
 .picture {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 p {
     font-size:18px;
+}
+
+.preview {
+    background-color:#DDDBCB;
+    
 }
 
 .selfPreview p {
@@ -67,52 +78,39 @@ p {
 
 .imgPreview {
     grid-area: imgPreview;
-    border-style: ridge;
-    border-color: blue;
-    border-width: 5px;
     width: 100%;
     height: 100%;
 }
 
 .selfPreview {
     grid-area: selfPreview;
-    border-style: ridge;
-    border-color: purple;
-    border-width: 5px;
     width: 100%;
     height: 100%;
 }
 .workPreview{
     grid-area: workPreview;
-    border-style: ridge;
-    border-color: green;
-    border-width: 5px;
     width: 100%;
     height: 100%;
 }
 
 .skillsPreview {
     grid-area: skillsPreview;
-    border-style: ridge;
-    border-color: black;
-    border-width: 5px;
     width: 100%;
     height: 100%;
 }
 
 .heroGrid {
-    display:grid;
-    /*outline-style: dotted;
-    outline-color: blue;*/
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
         "imgPreview imgPreview selfPreview selfPreview selfPreview"
-        "workPreview workPreview workPreview skillsPreview skillsPreview"
-    ;
+        "workPreview workPreview workPreview skillsPreview skillsPreview";
     align-items: center;
     justify-items: center;
-    box-sizing: border-box;
+    row-gap: 5px;
+    column-gap: 5px;
+    
 }
 
 /*End Grid Structure*/
@@ -222,12 +220,12 @@ p {
 
 footer {
     background-color: #DDDBCB;
+    margin-top: 20px;
 }
 
 footer ul {
     display: inline-block;
     vertical-align: top;
-
 }
 
 footer li {
@@ -240,15 +238,14 @@ button {
     padding: 3px 5px 3px 5px;
     cursor: pointer;
     display: block;
-    margin: auto;
+    margin: 0 auto;
+    font-weight: regular;
 }
 
-/*If HTML meta tag is not used, 'px' needs added to max-width*/
-@media only screen and (max-width: 600) {
+/*Would not work without px after adding hover interactions, it seemed*/
+@media only screen and (max-width: 600px) {
     .heroGrid {
         display:grid;
-        outline-style: dotted;
-        outline-color: blue;
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: 1fr;
         grid-template-areas:
