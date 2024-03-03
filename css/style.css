@@ -1,4 +1,6 @@
- body {
+/*Potentially have toggleOn and toggleOff instead of displayToggle, with the width and height adjusting 
+for each with a transition*/
+body {
     font-family: Zilla Slab, Yaldevi, serif;
     background-color: #DDDBCB;
     background-image: url('/images/sky.jpg')
@@ -11,7 +13,7 @@ section {
 }
 
 .displayToggle{
-    display: none;
+    display: none; 
 }
 
 .inline-block {
@@ -20,7 +22,7 @@ section {
 }
 h1 {
     text-align: center;
-}
+} 
 
 .logo {
     width: 20%;}
@@ -126,6 +128,9 @@ p {
     width: 33%;
     /*outline-style: dotted;
     outline-color: red;*/
+    background-color:#DDDBCB;
+    margin: 5px;
+    padding-top: 5px;
 }
 
 .skill img {

@@ -1,30 +1,26 @@
 
 $(".workPreview").on("mouseenter", function(){
-    $(".heroSection").toggleClass("displayToggle");
-    $(".myWork").toggleClass("displayToggle");
+    $(".heroSection").delay("slow").fadeOut();
+    $(".myWork").delay("slow").fadeIn();
 });
 
 $(".myWork").on("mouseleave", function(){
-    $(".heroSection").toggleClass("displayToggle");
-    $(".myWork").toggleClass("displayToggle");
+    $(".myWork").delay("slow").fadeOut();
+    $(".heroSection").delay("slow").fadeIn();
 });
 
 $(".skillsPreview").on("mouseenter", function(){
-    $(".heroSection").toggleClass("displayToggle");
-    $(".mySkills").toggleClass("displayToggle");
+    $(".heroSection").delay("slow").fadeOut();
+    $(".mySkills").delay("slow").fadeIn();
 });
 
 $(".mySkills").on("mouseleave", function(){
-    $(".heroSection").toggleClass("displayToggle");
-    $(".mySkills").toggleClass("displayToggle");
+    $(".heroSection").delay("slow").fadeIn();
+    $(".mySkills").delay("slow").fadeOut();
 });
 
-$("button").on("mouseenter", function(){
-    $("button").css("font-weight", "bold");
-})
-
-$("button").on("mouseleave", function(){
-    $("button").css("font-weight", "regular");
-})
 
 console.log("Your index.js file is loaded correctly!")
+
+/*Note: if you mouse quickly over both sections, both will register 
+and show up*/
