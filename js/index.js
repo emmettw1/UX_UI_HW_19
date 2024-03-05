@@ -29,7 +29,7 @@ $(".mySkills").on("mouseleave", function(){
 });
 
 
-console.log("Your index.js file is loaded correctly!")
+console.log("Your index.js file is loaded correctly")
 
 /*Note: if you mouse quickly over both sections, both will register 
 and show up*/
