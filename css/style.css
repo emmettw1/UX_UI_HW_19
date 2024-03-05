@@ -5,7 +5,7 @@ html {
 body {
     font-family: Zilla Slab, Yaldevi, serif;
     background-color: #DDDBCB;
-    background-image: url('images/sky.jpg');
+    background-image: url('.../images/sky.jpg');
     height: 100%;
 }
 
@@ -348,6 +348,8 @@ button {
     display: block;
     margin: 0 auto;
     font-weight: regular;
+    font-size: 18px;
+    font-family: Zilla Slab, Yaldevi, serif;
 }
 
 /*Would not work without px after adding hover interactions, it seemed*/
