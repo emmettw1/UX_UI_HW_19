@@ -1,15 +1,20 @@
-/*Potentially have toggleOn and toggleOff instead of displayToggle, with the width and height adjusting 
-for each with a transition*/
+html {
+    height: 100vh;
+}
+
 body {
     font-family: Zilla Slab, Yaldevi, serif;
     background-color: #DDDBCB;
-    background-image: url('/images/sky.jpg')
+    background-image: url('/images/sky.jpg');
+    height: 100%;
 }
 
 section {
     width: 80%;
+    height: 100%;
     margin: 0 auto;
-    background-color: transparent;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.3);
 }
 
 .displayToggle{
@@ -22,26 +27,39 @@ section {
 }
 h1 {
     text-align: center;
+    margin-bottom: 0px;
+    background-color: #DDDBCB;
 } 
 
 .logo {
-    width: 20%;}
+    width: 5%;
+    height:5%;}
 
-nav {
-    width: 100%;
-    margin: auto;
-    background-color: transparent;
-}
 
-ul {
+nav ul {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
-    width: 100%;
-    margin-left: auto;
+    width: 80%;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 20px;
 }
 
 nav li {
+    margin: 0 auto;
     font-size: 30px;
-    padding: inherit;
+    background: #DDDBCB;
+    border-radius: 5px;
+    padding: 5px 10px 0px 10px;
+    cursor: pointer;
+    
+}
+
+.preview ul {
+    list-style-type: none;
+    width: 100%;
+    margin: 0 auto;
 }
 
 h4 {
@@ -57,11 +75,12 @@ div {
 .imgPreview img{
     display: block;
     margin: 0 auto;
+    height: 100%;
 }
 
 .picture {
     width: 100%;
-    height: 100%;
+    height: 93%;
 }
 
 p {
@@ -70,12 +89,34 @@ p {
 
 .preview {
     background-color:#DDDBCB;
+    height: 100%;
     
 }
 
 .selfPreview p {
     padding: 5%;
 }
+
+.preview ul {
+    padding-bottom: 20px;
+}
+.preview li {
+    text-align: center;
+    margin-left: -90px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.hoverCTA {
+    padding: 3px 5px 3px 5px;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 30px;
+    
+
+}
+
 /*Grid Structure*/
 
 .imgPreview {
@@ -103,6 +144,7 @@ p {
 
 .heroGrid {
     display: grid;
+    height: 100%;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -110,14 +152,15 @@ p {
         "workPreview workPreview workPreview skillsPreview skillsPreview";
     align-items: center;
     justify-items: center;
-    row-gap: 5px;
-    column-gap: 5px;
+    row-gap: 10px;
+    column-gap: 10px;
     
 }
 
 /*End Grid Structure*/
 
 .flexContainer {
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-items: center;
@@ -126,11 +169,11 @@ p {
 
 .skill {
     width: 33%;
+    height: 93%;
     /*outline-style: dotted;
     outline-color: red;*/
     background-color:#DDDBCB;
-    margin: 5px;
-    padding-top: 5px;
+    margin: 0 auto;
 }
 
 .skill img {
@@ -141,6 +184,12 @@ p {
 .skill h3 {
     text-align: center;
 }
+
+.workGrid {
+    background-color: #DDDBCB;
+    height: 93%; 
+}
+
 
 .skill p, .workGrid p{
     margin: 10px;
@@ -223,19 +272,72 @@ p {
 
 
 
-footer {
+.footer {
     background-color: #DDDBCB;
     margin-top: 20px;
 }
 
-footer ul {
-    display: inline-block;
-    vertical-align: top;
+.footerGrid * {
+    margin: -50px;
 }
 
-footer li {
-    font-size:20px
+/*Start Grid Structure*/
+
+.greeting {
+    grid-area: greeting;
+    font-size: 30px;
 }
+
+.email {
+    grid-area: email;
+    font-size: 18px;
+}
+
+.profile {
+    grid-area: profile;
+    height: 70%;
+}
+
+.phone {
+    grid-area: phone;
+    font-size: 18px;
+}
+
+.copyright {
+    grid-area: copyright;
+    height: 70%;
+}
+
+.linkedin {
+    grid-area: linkedin;
+    height: 70%
+}
+
+.fb {
+    grid-area: fb;
+    height: 70%
+}
+
+.footerGrid {
+    width: 20%;
+    margin: 0 auto;
+    display: grid;
+    /*height: auto*/
+    /*outline-style: dotted;
+    outline-color: blue;*/
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "greeting profile profile"
+        "email profile profile"
+        "phone profile profile"
+        "copyright linkedin fb";
+    align-items: center;
+    justify-items: center;
+
+}
+
+/*End Grid Structure*/
 
 button {
     background-color: #62E7F8;

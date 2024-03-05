@@ -1,22 +1,21 @@
-
 $(".workPreview").on("mouseenter", function(){
-    $(".heroSection").delay("slow").fadeOut();
-    $(".myWork").delay("slow").fadeIn();
+    $(".heroSection").fadeOut();
+    $(".myWork").fadeIn();
 });
 
 $(".myWork").on("mouseleave", function(){
-    $(".myWork").delay("slow").fadeOut();
-    $(".heroSection").delay("slow").fadeIn();
+    $(".myWork").fadeOut();
+    $(".heroSection").fadeIn();
 });
 
 $(".skillsPreview").on("mouseenter", function(){
-    $(".heroSection").delay("slow").fadeOut();
-    $(".mySkills").delay("slow").fadeIn();
+    $(".heroSection").fadeOut();
+    $(".mySkills").fadeIn();
 });
 
 $(".mySkills").on("mouseleave", function(){
-    $(".heroSection").delay("slow").fadeIn();
-    $(".mySkills").delay("slow").fadeOut();
+    $(".heroSection").fadeIn();
+    $(".mySkills").fadeOut();
 });
 
 
