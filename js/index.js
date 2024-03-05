@@ -1,3 +1,13 @@
+$(".skillsMenu").on("click", function(){
+    $("section:visible").fadeOut();
+    $(".mySkills").fadeIn();
+})
+
+$(".workMenu").on("click", function(){
+    $("section:visible").fadeOut();
+    $(".myWork").fadeIn();
+})
+
 $(".workPreview").on("mouseenter", function(){
     $(".heroSection").fadeOut();
     $(".myWork").fadeIn();
