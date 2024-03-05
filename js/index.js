@@ -9,23 +9,23 @@ $(".workMenu").on("click", function(){
 })
 
 $(".workPreview").on("mouseenter", function(){
-    $(".heroSection").fadeOut();
+    $("section:visible").fadeOut();
     $(".myWork").fadeIn();
 });
 
 $(".myWork").on("mouseleave", function(){
-    $(".myWork").fadeOut();
+    $("section:visible").fadeOut();
     $(".heroSection").fadeIn();
 });
 
 $(".skillsPreview").on("mouseenter", function(){
-    $(".heroSection").fadeOut();
+    $("section:visible").fadeOut();
     $(".mySkills").fadeIn();
 });
 
 $(".mySkills").on("mouseleave", function(){
     $(".heroSection").fadeIn();
-    $(".mySkills").fadeOut();
+    $("section:visible").fadeOut();
 });
 
 
