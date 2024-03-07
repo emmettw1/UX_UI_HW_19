@@ -1,0 +1,203 @@
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: Zilla Slab, Yaldevi, serif;
+    background-color: #DDDBCB;
+    background-image: url('...');
+    height: 100%;
+}
+
+section {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.inline-block {
+    display: inline-block;
+
+}
+h1 {
+    text-align: center;
+    margin-bottom: 0px;
+    background-color: #DDDBCB;
+} 
+
+.logo {
+    width: 5%;
+    height:5%;}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    width: 80%;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 20px;
+}
+
+nav li {
+    margin: 0 auto;
+    font-size: 30px;
+    background: #DDDBCB;
+    border-radius: 5px;
+    padding: 5px 10px 0px 10px;
+    cursor: pointer;
+    
+}
+
+.preview ul {
+    list-style-type: none;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h4 {
+    font-size: 24px;
+    text-align: center;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+p {
+    font-size:18px;
+}
+
+.jumbotron {
+    margin-top: 40px;
+}
+
+.footer {
+    background-color: #DDDBCB;
+    margin-top: 20px;
+}
+
+.footerGrid * {
+    margin: -50px;
+}
+
+/*Start Grid Structure*/
+
+.greeting {
+    grid-area: greeting;
+    font-size: 30px;
+}
+
+.email {
+    grid-area: email;
+    font-size: 18px;
+}
+
+.profile {
+    grid-area: profile;
+    height: 70%;
+}
+
+.phone {
+    grid-area: phone;
+    font-size: 18px;
+}
+
+.copyright {
+    grid-area: copyright;
+    height: 70%;
+}
+
+.linkedin {
+    grid-area: linkedin;
+    height: 70%
+}
+
+.fb {
+    grid-area: fb;
+    height: 70%
+}
+
+.footerGrid {
+    width: 20%;
+    margin: 0 auto;
+    display: grid;
+    /*height: auto*/
+    /*outline-style: dotted;
+    outline-color: blue;*/
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "none profile profile"
+        "greeting profile profile"
+        "email profile profile"
+        "copyright linkedin fb";
+    align-items: center;
+    justify-items: center;
+
+}
+
+/*End Grid Structure*/
+
+button {
+    background-color: #62E7F8;
+    border: 1px solid black;
+    padding: 3px 5px 3px 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-weight: regular;
+    font-size: 18px;
+    font-family: Zilla Slab, Yaldevi, serif;
+}
+
+/*Would not work without px after adding hover interactions, it seemed*/
+@media only screen and (max-width: 600px) {
+    .heroGrid {
+        display:grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "imgPreview"
+            "selfPreview"
+            "workPreview"
+            "skillsPreview"
+        ;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .flexContainer {
+        display: grid;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    .workGrid {
+        display: grid;
+        /*height: auto*/
+        outline-style: dotted;
+        outline-color: blue;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "ppages"
+            "p1img"
+            "p1text"
+            "p1button"
+            "localeyes"
+            "p2img"
+            "p2text"
+            "p2button";
+        align-items: center;
+        justify-items: center;   
+    }
+
+}
