@@ -1,3 +1,5 @@
+/*Need to update media query to reflect grid changes*/
+
 html {
     height: 100vh;
 }
@@ -144,19 +146,39 @@ p {
 
 /*End Grid Structure*/
 
-.flexContainer {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
+.mySkills {
+    overflow: hidden;
 }
 
+.skillTitle {
+    grid-area: skillTitle;
+}
 
-.skill {
-    width: 33%;
-    height: 93%;
-    /*outline-style: dotted;
-    outline-color: red;*/
+.firstSkill {
+    grid-area: firstSkill;
+}
+
+.secondSkill {
+    grid-area: secondSkill;
+}
+
+.thirdSkill {
+    grid-area: thirdSkill;
+}
+
+.skillGrid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "skillTitle skillTitle skillTitle"
+    "firstSkill secondSkill thirdSkill";
+}
+
+.skillGrid div {
+    height: 100%;
     background-color:#DDDBCB;
     margin: 0 auto;
 }
@@ -170,11 +192,9 @@ p {
     text-align: center;
 }
 
-.workGrid {
-    background-color: #DDDBCB;
-    height: 93%; 
+.myWork {
+    overflow: hidden;
 }
-
 
 .skill p, .workGrid p{
     margin: 10px;
@@ -193,11 +213,12 @@ p {
     font-size: 24px;
 }
 
-.workGrid p {
-    padding: 30px 30px 10px 30px;
-}
 
 /*Grid Structure*/
+.workTitle {
+    grid-area: title;
+}
+
 .ppages {
     grid-area: ppages;
 }
@@ -239,12 +260,15 @@ p {
 }
 .workGrid {
     display: grid;
+    background-color: #DDDBCB;
+    height: 100%;
     /*height: auto*/
     /*outline-style: dotted;
     outline-color: blue;*/
-    grid-template-rows: 15% 30% 45% 10%; 
+    grid-template-rows: 5% 15% 30% 40% 10%; 
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
+        "title title"
         "ppages localeyes"
         "p1img p2img"
         "p1text p2text"
@@ -253,6 +277,8 @@ p {
     justify-items: center;
 
 }
+
+
 /*End Grid Structure*/
 
 
@@ -325,14 +351,14 @@ p {
 /*End Grid Structure*/
 
 button {
-    background-color: #62E7F8;
-    border: 1px solid black;
-    padding: 3px 5px 3px 5px;
+    background-color: #31A5F2;
+    border: 5px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
     cursor: pointer;
     display: block;
     margin: 0 auto;
     font-weight: regular;
-    font-size: 18px;
+    font-size: 24px;
     font-family: Zilla Slab, Yaldevi, serif;
 }
 
@@ -352,14 +378,17 @@ button {
         justify-items: center;
     }
     
-    .flexContainer {
+    .skillGrid {
         display: grid;
-        flex-direction: column;
-        justify-items: center;
-    }
-
-    .skill {
         width: 100%;
+        height: 100%;
+        grid-template-rows: repeat(4fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "skillTitle"
+        "firstSkill"
+        "secondSkill"
+        "thirdSkill";
     }
 
     .workGrid {
